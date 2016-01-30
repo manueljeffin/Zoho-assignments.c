@@ -19,7 +19,7 @@ void bitsettoone(int copyarray[],int bitindex)
 void bitsettozero(int copyarray[],int bitindex)
 {
     int value=0,i;
-    printf("Bit %d set to 1 :",bitindex);
+    printf("Bit %d set to 0 :",bitindex);
     copyarray[8-1-bitindex]=0;
     for(i=0;i<8;i++)
     {
@@ -192,7 +192,7 @@ int main(void) {
         copyarray[i]=valarray[i];
 		value1++;
 	}
-    printf("Given Number :");
+    	printf("Given Number :");
 	for(i=0;i<8;i++)
 	{
 		printf("%d",valarray[i]);
@@ -201,10 +201,10 @@ int main(void) {
     printf("decimal equivalent :%d\n",number);
     bitsettoone(valarray,bitindex);
     bitsettozero(valarray,bitindex);
-    togglebit(valarray,bitindex);
-    toggleexceptbit(valarray,bitindex);
-    rotateright(valarray,bitindex);
-    rotateleft(valarray,bitindex);
+    togglebit(copyarray,bitindex);
+    toggleexceptbit(copyarray,bitindex);
+    rotateright(copyarray,bitindex);
+    rotateleft(copyarray,bitindex);
     swapnibble(array);
     
 	// your code goes here
