@@ -1,20 +1,19 @@
-# Zoho-assignments.c
 #include <stdio.h>
 #include <stdlib.h>
 int main(void) {
 	int input,n,duplicate,duplicate1,flagship,i=3;
-	int *prime;
+	int *list;
 	printf("Enter the input : \n");
 	scanf("%d",&input);
-	prime=(int*)malloc(1*sizeof(int));
-	prime[0]=2;
+	list=(int*)malloc(1*sizeof(int));
+	list[0]=2;
 	n=0;
 	while(1)
 	{
 		flagship=1;;
-		if(prime[n]>input)
+		if(list[n]>input)
 		{
-			printf("The next prime is %d\n",prime[n]);
+			printf("The next prime is %d",list[n]);
 			break;
 		}
 		else
@@ -23,7 +22,7 @@ int main(void) {
 			duplicate1=duplicate+1;
 			while(duplicate1--)
 			{
-				if(i%prime[duplicate]==0)
+				if(i%list[duplicate]==0)
 				{
 					flagship=0;
 					break;
@@ -33,11 +32,11 @@ int main(void) {
 			if(flagship==1)
 			{
 				n++;
-				prime=(int*)realloc(prime,((n+1)*sizeof(int)));
-				prime[n]=i;
-				if(prime[n]>input)
+				list=(int*)realloc(list,((n+1)*sizeof(int)));
+				list[n]=i;
+				if(list[n]>input)
 				{
-					printf("The next prime is %d",prime[n]);
+					printf("The next prime is %d",list[n]);
 					break;
 				}
 			}
