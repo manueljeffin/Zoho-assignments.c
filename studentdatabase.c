@@ -19,7 +19,7 @@ void main()
 	float average[5]={0};
 	int maximum;
 	FILE *fp;
-	fp=fopen("D:/studentdatabase.csv","w");
+	fp=fopen("D:/studentdatabase.csv","r");
 	if(fp==NULL)
 	{
 		printf("No such file\n");
