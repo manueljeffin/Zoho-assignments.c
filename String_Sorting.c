@@ -8,9 +8,9 @@ int main(void) {
 	char ***values;
 	int *lengthchecker,length;
 	char str[100];
-    char tempstr[100];
-    int maxlength=0;
-    int k,strcomparer;
+    	char tempstr[100];
+    	int maxlength=0;
+    	int k,strcomparer;
 	lengthchecker=(int *)calloc(10,sizeof(int));
 	printf("Enter the values: \n");
 	values=(char ***)malloc(10*sizeof(char **));
@@ -25,14 +25,14 @@ int main(void) {
 	printf("Enter the strings :\n");
 	while(1)
 	{
-        str[0]='\0';
+        	str[0]='\0';
 		scanf("%s",str);
 		if(str[0]=='\0')
 		{
 			break;
 		}
 		length=strlen(str);
-        strcpy(values[length][lengthchecker[length]++],str);
+        	strcpy(values[length][lengthchecker[length]++],str);
 		if(length>maxlength)
 		{
 			maxlength=length;
@@ -44,22 +44,22 @@ int main(void) {
 		{
 			continue;
 		}
-        if(lengthchecker[i]!=1)
-        {
-            for(j=0;j<lengthchecker[i];j++)
-            {
-                for(k=j+1;k<lengthchecker[i];k++)
-                {
-                    strcomparer=strcmp(values[i][j],values[i][k]);
-                    if(strcomparer>0)
-                    {
-                        strcpy(tempstr,values[i][j]);
-                        strcpy(values[i][j],values[i][k]);
-                        strcpy(values[i][k],tempstr);
-                    }
-                }
-            }
-        }
+        	if(lengthchecker[i]!=1)
+        	{
+            		for(j=0;j<lengthchecker[i];j++)
+        		{
+                		for(k=j+1;k<lengthchecker[i];k++)
+                		{
+                    			strcomparer=strcmp(values[i][j],values[i][k]);
+                    			if(strcomparer>0)
+                    			{
+                        			strcpy(tempstr,values[i][j]);
+                        			strcpy(values[i][j],values[i][k]);
+                        			strcpy(values[i][k],tempstr);
+                			 }
+                		}
+            		}
+        	}
 		for(j=0;j<lengthchecker[i];j++)
 		{
 			printf("%s\n",values[i][j]);
