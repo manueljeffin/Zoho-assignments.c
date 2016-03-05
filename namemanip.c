@@ -1,4 +1,3 @@
-# Zoho-assignments.c
 //
 //  main.c
 //  studentid
