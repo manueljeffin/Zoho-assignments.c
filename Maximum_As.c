@@ -1,4 +1,3 @@
-# Zoho-assignments.c
 #include <stdio.h>
 #include <stdlib.h>
 
