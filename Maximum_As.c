@@ -51,7 +51,7 @@ int main()
         }
         
         //------------SOLUTION---------------------------
-        printf("The maximum number of A's that can be printed using the given strokes is : %d\n",solution);
+        printf("The maximum number of A's that can be printed using the given keystrokes is : %d\n",solution);
     }
     return 0;
 }
