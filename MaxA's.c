@@ -45,6 +45,9 @@ int main()
             A A A ctrl+A ctrl+C ctrl+V ctrl+V   -> optimalfinder=9
             A A A A ctrl+A ctrl+C ctrl+V ->optimalfinder=8 
             A A A A A ctrl+A ctrl+C  ->optimalfinder=5*/
+            
+        /* --------solution[j-1] refers to the (number of paste operations+1) ... +1 is done to include initial number of A's
+            pressed-------------------------------------------------------*/
         
         //------------SOLUTION---------------------------
         printf("The maximum As that can be printed using %d keystrokes is %d\n",keystrokes,solution[keystrokes-1]);
