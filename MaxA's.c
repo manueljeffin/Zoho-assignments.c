@@ -18,7 +18,7 @@ int main()
             continue;
         }
         int *solution;
-        solution=(int *)malloc(keystrokes*sizeof(int));
+        solution=(int *)calloc(keystrokes,sizeof(int));
         for(i=1;i<=6;i++)
         {
             solution[i-1]=i;
@@ -28,7 +28,6 @@ int main()
         
         for(i=7;i<=keystrokes;i++)
         {
-            solution[i-1]=0;
             
             for(j=i-3;j>=1;j--)
             {
