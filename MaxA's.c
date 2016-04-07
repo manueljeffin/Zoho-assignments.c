@@ -44,7 +44,7 @@ int main()
             A A ctrl+A ctrl+C ctrl+V ctrl+V ctrl+V  -> optimalfinder=8
             A A A ctrl+A ctrl+C ctrl+V ctrl+V   -> optimalfinder=9
             A A A A ctrl+A ctrl+C ctrl+V ->optimalfinder=8 
-            A A A A A ctrl+A ctrl+C ctrl+V ->optimalfinder=9*/
+            A A A A A ctrl+A ctrl+C  ->optimalfinder=5*/
         
         //------------SOLUTION---------------------------
         printf("The maximum As that can be printed using %d keystrokes is %d\n",keystrokes,solution[keystrokes-1]);
