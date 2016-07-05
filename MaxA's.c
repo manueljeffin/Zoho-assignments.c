@@ -12,7 +12,7 @@ int main()
         int keystrokes,i,j;
         printf("Enter the number of keystrokes :\n");
         scanf("%d",&keystrokes);
-        if(keystrokes<=6)
+        if(keystrokes<=6)//less than 7 means , keystrokes itself, i.e typing as many A's
         {
             printf("The maximum A's that can be printed for %d keystrokes is %d\n",keystrokes,keystrokes);
             continue;
@@ -31,7 +31,7 @@ int main()
             
             for(j=i-3;j>=1;j--)
             {
-                int breaker=i-j-1;
+                int breaker=i-j-1; //breaker is a number which will print tat many A's and then start selecting,copying, paste
                 int optimalfinder=breaker*solution[j-1];
                     //printf("The optimal finder :%d\n",optimalfinder);
                 if(optimalfinder>solution[i-1])
